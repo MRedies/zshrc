@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -63,11 +63,13 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
- else
-   export EDITOR='nvim'
- fi
+if [[ -n $SSH_CONNECTION ]]; then
+	export EDITOR='nvim'
+else
+	export EDITOR='nvim'
+fi
+
+source /opt/intel/compilers_and_libraries_2017/linux/bin/compilervars.sh intel64
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -83,3 +85,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+if [ -n "/opt/magma/lib" ] ; then
+    export LD_LIBRARY_PATH="/opt/magma/lib:$LD_LIBRARY_PATH"
+fi
