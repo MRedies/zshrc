@@ -70,7 +70,8 @@ else
 fi
 
 source /opt/intel/compilers_and_libraries_2017/linux/bin/compilervars.sh intel64
-
+alias amplxe-gui=/opt/intel/vtune_amplifier_xe/bin64/amplxe-gui 
+#source /opt/intel/vtune_amplifier_xe_2017/amplxe-vars.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -90,3 +91,7 @@ source /opt/intel/compilers_and_libraries_2017/linux/bin/compilervars.sh intel64
 if [ -n "/opt/magma/lib" ] ; then
     export LD_LIBRARY_PATH="/opt/magma/lib:$LD_LIBRARY_PATH"
 fi
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/home/matthias/anaconda3/bin:$PATH"
+
