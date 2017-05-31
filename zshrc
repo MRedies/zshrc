@@ -82,16 +82,19 @@ alias amplxe-gui=/opt/intel/vtune_amplifier_xe/bin64/amplxe-gui
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
+
+
+
+alias julia=/home/matthias/bin/julia/bin/julia
+alias jnb='jupyter notebook --browser=none'
+
 if [ -n "/opt/magma/lib" ] ; then
     export LD_LIBRARY_PATH="/opt/magma/lib:$LD_LIBRARY_PATH"
 fi
 
-# added by Anaconda3 4.3.1 installer
-export PATH="/home/matthias/anaconda3/bin:$PATH"
 
+# added by Anaconda2 4.3.1 installer
+export PATH="/home/matthias/anaconda2/bin:$PATH"
+
+# set IFORT to english
+export LANG=en_US.UTF-8
