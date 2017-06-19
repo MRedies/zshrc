@@ -98,3 +98,6 @@ export PATH="/home/matthias/anaconda2/bin:$PATH"
 
 # set IFORT to english
 export LANG=en_US.UTF-8
+
+# include plotter into PYTHONPATH
+export PYTHONPATH="${PYTHONPATH}:/home/matthias/STB_plotter"
