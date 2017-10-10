@@ -72,6 +72,7 @@ fi
 source /opt/intel/compilers_and_libraries_2017/linux/bin/compilervars.sh intel64
 alias amplxe-gui=/opt/intel/vtune_amplifier_xe/bin64/amplxe-gui 
 #source /opt/intel/vtune_amplifier_xe_2017/amplxe-vars.sh
+source /opt/intel/advisor/advixe-vars.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -86,7 +87,10 @@ alias amplxe-gui=/opt/intel/vtune_amplifier_xe/bin64/amplxe-gui
 
 
 alias julia=/home/matthias/bin/julia/bin/julia
-alias jnb='jupyter notebook --browser=none'
+alias jnb='jupyter notebook --browser=none '
+alias vim='nvim'
+alias ssh='ssh -Y'
+alias rm='trash'
 
 if [ -n "/opt/magma/lib" ] ; then
     export LD_LIBRARY_PATH="/opt/magma/lib:$LD_LIBRARY_PATH"
@@ -101,3 +105,10 @@ export LANG=en_US.UTF-8
 
 # include plotter into PYTHONPATH
 export PYTHONPATH="${PYTHONPATH}:/home/matthias/STB_plotter"
+export PYTHONPATH="${PYTHONPATH}:/home/matthias/STB2DB"
+
+# for weired MPI errors:
+export I_MPI_SHM_LMT=shm
+
+# OPAM configuration
+. /home/matthias/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
