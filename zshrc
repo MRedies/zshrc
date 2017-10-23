@@ -90,6 +90,7 @@ alias julia=/home/matthias/bin/julia/bin/julia
 alias jnb='jupyter notebook --browser=none '
 alias vim='nvim'
 alias ssh='ssh -Y'
+alias render="/home/matthias/spinView/main.py"
 #alias rm='trash'
 
 if [ -n "/opt/magma/lib" ] ; then
