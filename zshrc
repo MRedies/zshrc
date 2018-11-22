@@ -69,10 +69,7 @@ else
 	export EDITOR='nvim'
 fi
 
-source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
-alias amplxe-gui=/opt/intel/vtune_amplifier_xe/bin64/amplxe-gui 
-#source /opt/intel/vtune_amplifier_xe/amplxe-vars.sh
-source /opt/intel/advisor/advixe-vars.sh
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -86,7 +83,6 @@ source /opt/intel/advisor/advixe-vars.sh
 
 
 
-alias julia=/home/matthias/bin/julia/bin/julia
 alias jnb='jupyter notebook --browser=none '
 alias vim='nvim'
 alias ssh='ssh -Y'
