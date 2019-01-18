@@ -63,7 +63,7 @@ export FLEURDBGMPI="/Users/redies/fleur/build.debug/fleur_MPI"
 export LANG=en_US.UTF-8
 export PATH="/usr/local/gcc8/bin/:$PATH"
 export PATH="/Users/redies/.local/bin:$PATH"
-export GFORTRAN_STDOUT_UNIT=77
+
 source /usr/local/intel/compilers_and_libraries/linux/bin/compilervars.sh -arch intel64 -platform linux
 
 ulimit -s unlimited
