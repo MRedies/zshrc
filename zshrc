@@ -1,100 +1,80 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bureau"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=7
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git sudo web-search)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='nvim'
+   export EDITOR='nvim'
 else
-	export EDITOR='nvim'
+   export EDITOR='nvim'
 fi
 
-source /opt/intel/compilers_and_libraries_2017/linux/bin/compilervars.sh intel64
-alias amplxe-gui=/opt/intel/vtune_amplifier_xe/bin64/amplxe-gui 
-#source /opt/intel/vtune_amplifier_xe_2017/amplxe-vars.sh
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+setopt +o nomatch
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-
-
-alias julia=/home/matthias/bin/julia/bin/julia
 alias jnb='jupyter notebook --browser=none'
+alias nvim='~/nvimconfig/nvim.appimage'
+alias git='/Users/redies/bin/git/bin/git'
+alias code='/Users/redies/bin/rcode'
+alias cmake='/Users/redies/bin/cmake/cmake-3.12.1-Linux-x86_64/bin/cmake'
 
-if [ -n "/opt/magma/lib" ] ; then
-    export LD_LIBRARY_PATH="/opt/magma/lib:$LD_LIBRARY_PATH"
-fi
+alias gcc='/usr/local/gcc8/bin/gcc'
+alias gfortran='/usr/local/gcc8/bin/gfortran'
+alias g++='/usr/local/gcc8/bin/g++'
+alias gcov='/usr/local/gcc8/bin/gcov'
+alias lcov='/Local/tmp/lcov/bin/lcov'
+alias genhtml='/Local/tmp/lcov/bin/genhtml'
+alias firefox='/Local/tmp/bin/firefox/firefox'
+alias thunderbird='/Local/tmp/bin/thunderbird/thunderbird'
+alias keepassx='/Local/tmp/bin/keepassX/bin/keepassx'
+alias totalview='/Local/tmp/bin/totalview/toolworks/totalview.2018.1.12/bin/tv8'
 
+alias fleur='/Users/redies/fleur/build/fleur -trace'
+alias mpi_fleur='mpirun -np 4 /Users/redies/fleur/build/fleur_MPI -trace'
+alias inpgen='/Users/redies/fleur/build/inpgen -trace'
 
-# added by Anaconda2 4.3.1 installer
-export PATH="/home/matthias/anaconda2/bin:$PATH"
+alias fleur.dbg='/Users/redies/fleur/build.debug/fleur'
+alias inpgen.dbg='/Users/redies/fleur/build.debug/inpgen -trace'
+alias fprettify='$HOME/bin/fprettify/fprettify.py'
+alias f2f='/Local/tmp/bin/f2f-0.96/f2f.pl'
+
+alias cf="rm broyd  broyd.7 cdn* stars wkf2  fleurinputschema.xsd judft_times  inf out  out.xml  usage.json struct.xsf juDFT_times FleurInputSchema.xsd 2> /dev/null"
+
+alias ipython="ipython3"
+alias python="python3"
+
+alias raythis="python3 ~/magnet_render/magren.py"
+
+alias rg="/Local/tmp/bin/ripgrep/target/release/rg"
+
+#fleur bins
+export FLEUR="/Users/redies/fleur/build/fleur"
+export FLEURMPI="/Users/redies/fleur/build/fleur_MPI"
+export FLEURDBG="/Users/redies/fleur/build.debug/fleur"
+export FLEURDBGMPI="/Users/redies/fleur/build.debug/fleur_MPI"
 
 # set IFORT to english
 export LANG=en_US.UTF-8
+export PATH="/usr/local/gcc8/bin/:$PATH"
+export PATH="/Users/redies/.local/bin:$PATH"
+export GFORTRAN_STDOUT_UNIT=77
+source /usr/local/intel/compilers_and_libraries/linux/bin/compilervars.sh -arch intel64 -platform linux
+
+ulimit -s unlimited
+ 
+#totalview license
+export LM_LICENSE_FILE=1703@licsrv13.zam.kfa-juelich.de:1703@licsrv11.zam.kfa-juelich.de:03@licsrv12.zam.kfa-juelich.de
+
+# added by Anaconda3 installer
+#export PATH="/Local/tmp/bin/anaconda3/bin:$PATH"
+
+# setup MPI
+#export MPICH_F90=/usr/local/gcc8/bin/gfortran
+#export MPICH_CC=/usr/local/gcc8/bin/gcc
+#export MPICH_CXX=/usr/local/gcc8/bin/g++
